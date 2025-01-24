@@ -50,7 +50,7 @@
       </div>
 
       <div class="custom-card mt-4">
-        <form>
+        <form id="product-form">
           <!-- Nome Prodotto -->
           <div class="form-section">
             <label for="nomeProdotto" class="form-label">Nome Prodotto <span class="text-danger">*</span></label>
@@ -72,7 +72,7 @@
 
           <!-- Nome Brand -->
           <div class="form-section">
-            <label for="nomeProdotto" class="form-label">Nome Brand <span class="text-danger">*</span></label>
+            <label for="nomeBrand" class="form-label">Nome Brand <span class="text-danger">*</span></label>
             <input type="text" class="form-control mb-4" id="nomeBrand" name="nomeBrand" placeholder="Inserisci il nome del brand" required />
           </div>
 
@@ -98,7 +98,7 @@
 
           <!-- Pulsanti -->
           <div class="d-flex justify-content-end mt-4">
-            <button type="reset" class="btn btn-primary me-2">Aggiungi</button>
+            <button type="submit" class="btn btn-primary me-2" id="submit-btn">Aggiungi</button>
             <button type="reset" class="btn btn-secondary" id="reset-button">Reset</button>
           </div>
         </form>
