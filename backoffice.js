@@ -47,6 +47,7 @@ form.onsubmit = function (event) {
     },
   })
     .then((resp) => {
+      console.log("Response:", resp);
       if (resp.ok) {
         return resp.json();
       } else {
@@ -54,6 +55,7 @@ form.onsubmit = function (event) {
       }
     })
     .then((product) => {
+      console.log("Product:", product);
       if (!productId) {
         alert(`Prodotto con id ${product._id} creato correttamente!`);
 
