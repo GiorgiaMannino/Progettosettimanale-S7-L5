@@ -54,6 +54,17 @@ window.addEventListener("DOMContentLoaded", () => {
         btns.appendChild(deleteBtn);
       });
   }
+
+  // Pulsante "Reset"
+  const resetButton = document.getElementById("reset-button");
+
+  resetButton.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    if (confirm("Sei sicuro di voler resettare il modulo? Perderai tutte le modifiche.")) {
+      form.reset();
+    }
+  });
 });
 
 form.onsubmit = function (event) {
