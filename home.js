@@ -32,6 +32,7 @@ window.addEventListener("DOMContentLoaded", () => {
         productsList.appendChild(productCard);
       });
     })
+
     .catch((error) => {
       console.error("Errore nel recupero dei prodotti:", error);
       alert("C'è stato un errore nel caricare i prodotti.");
