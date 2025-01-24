@@ -6,6 +6,14 @@ const params = new URLSearchParams(window.location.search);
 const productId = params.get("productId");
 
 window.addEventListener("DOMContentLoaded", () => {
+  const pageTitle = document.getElementById("page-title");
+  if (productId) {
+    pageTitle.innerText = "Modifica il prodotto";
+    submitBtn.innerText = "Modifica prodotto";
+  } else {
+    pageTitle.innerText = "Inserisci un nuovo prodotto";
+  }
+
   if (productId) {
     submitBtn.innerText = "Modifica prodotto";
     fetch(`https://striveschool-api.herokuapp.com/api/product/${productId}`, {
