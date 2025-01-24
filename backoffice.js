@@ -81,7 +81,7 @@ window.addEventListener("DOMContentLoaded", () => {
         productCard.classList.add("col-md-4", "mb-4");
 
         productCard.innerHTML = `
-        <div class="card">
+        <div class="card shadow">
           <img src="${product.imageUrl}" class="card-img-top" alt="${product.name}">
           <div class="card-body">
             <h5 class="card-title">${product.name}</h5>

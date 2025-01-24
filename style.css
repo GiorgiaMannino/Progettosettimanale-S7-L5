@@ -7,3 +7,15 @@
   width: 3rem;
   height: 3rem;
 }
+
+.hero-image {
+  background-image: url("https://www.renovotech.it/wp-content/uploads/2023/05/7289494_15140440_1607441188_complete_guide_to_refurbished_phones.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
