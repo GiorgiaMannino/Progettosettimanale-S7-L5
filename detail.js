@@ -13,36 +13,24 @@ fetch(`https://striveschool-api.herokuapp.com/api/product/${productId}`, {
     const productDetail = document.getElementById("product-detail");
 
     productDetail.innerHTML = `
-      <div class="row justify-content-center mt-5">
-        <!-- Colonna per i dettagli del prodotto -->
-        <div class="col-md-6">
-          <table class="table table-bordered">
-            <tbody>
-              <tr>
-                <th>Nome</th>
-                <td>${product.name}</td>
-              </tr>
-              <tr>
-                <th>Descrizione</th>
-                <td>${product.description}</td>
-              </tr>
-              <tr>
-                <th>Prezzo</th>
-                <td>€${product.price}</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="d-flex justify-content-between">
-            <a href="backoffice.html?productId=${product._id}" class="btn btn-primary">Modifica</a>
-            <a href="index.html" class="btn btn-secondary">Torna alla homepage</a>
-          </div>
-        </div>
-        
-        <!-- Colonna per l'immagine -->
-        <div class="col-md-6">
-          <img src="${product.imageUrl}" class="img-fluid rounded" alt="${product.name}">
+     <div class="row justify-content-center mt-5">
+  <div class="col-md-7 text-center">
+    <img src="${product.imageUrl}" class="img-fluid rounded w-75" alt="${product.name}">
+  </div>
+  <div class="col-md-8 text-start">
+    <div class="product-info">
+      <h2 class="fw-bold mt-5">${product.name}</h2>
+      <p class="text-muted mt-3">${product.description} <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda distinctio quibusdam, reprehenderit, quaerat delectus beatae nemo inventore voluptatum cumque laboriosam consequuntur, error porro totam cum suscipit quidem eos dolorum. Expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda distinctio quibusdam, reprehenderit, quaerat delectus beatae nemo inventore voluptatum cumque laboriosam consequuntur, error porro totam cum suscipit quidem eos dolorum. Expedita.</p>
+      <div class="d-flex justify-content-between align-items-center mt-3">
+        <span class="fs-5 fw-bold mb-5 bg-secondary text-white px-3 py-2 rounded">€${product.price}</span>
+        <div class="d-flex">
+          <a href="backoffice.html?productId=${product._id}" class="btn btn-primary me-2 my-5">Modifica</a>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
     `;
   })
   .catch((err) => {

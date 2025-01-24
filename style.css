@@ -1,5 +1,22 @@
-.font-custom {
-  font-family: "Roboto", sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+.card-title,
+.card-text,
+.navbar-brand {
+  font-family: "Poppins", sans-serif;
 }
 
 /* spinner */
@@ -9,7 +26,7 @@
 }
 
 .hero-image {
-  background-image: url("https://www.renovotech.it/wp-content/uploads/2023/05/7289494_15140440_1607441188_complete_guide_to_refurbished_phones.jpg");
+  background-image: url("https://img.tuttoandroid.net/wp-content/uploads/2022/12/molti_smartphone_tta_1.jpg");
   background-size: cover;
   background-position: center;
   height: 400px;
