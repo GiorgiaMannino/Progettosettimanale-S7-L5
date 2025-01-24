@@ -78,7 +78,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
       products.forEach((product) => {
         const productCard = document.createElement("div");
-        productCard.classList.add("col-md-4", "mb-4");
+        productCard.classList.add("col-md-4", "col-sm-6", "mb-4");
 
         productCard.innerHTML = `
         <div class="card shadow">
@@ -87,7 +87,7 @@ window.addEventListener("DOMContentLoaded", () => {
             <h5 class="card-title">${product.name}</h5>
             <p class="card-text">${product.description}</p>
             <p class="card-text">€${product.price}</p>
-            <a href="backoffice.html?productId=${product._id}" class="btn btn-primary">Modifica</a>
+            <a href="backoffice.html?productId=${product._id}" class="btn btn-primary shadow-lg">Modifica</a>
           </div>
         </div>
       `;

@@ -21,6 +21,16 @@ fetch(`https://striveschool-api.herokuapp.com/api/product/${productId}`, {
     <div class="product-info">
       <h2 class="fw-bold mt-5">${product.name}</h2>
       <p class="text-muted mt-3">${product.description} <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda distinctio quibusdam, reprehenderit, quaerat delectus beatae nemo inventore voluptatum cumque laboriosam consequuntur, error porro totam cum suscipit quidem eos dolorum. Expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda distinctio quibusdam, reprehenderit, quaerat delectus beatae nemo inventore voluptatum cumque laboriosam consequuntur, error porro totam cum suscipit quidem eos dolorum. Expedita.</p>
+         <div class="mt-4">
+          <h5 class="fw-bold">Caratteristiche Tecniche</h5>
+          <ul class="text-muted fs-6">
+            <li>Display: Lorem ipsum dolor sit amet
+            <li>Memoria: Lorem ipsum dolor sit amet</li>
+            <li>Fotocamera: Lorem ipsum dolor sit amet</li>
+            <li>Processore: Lorem ipsum dolor sit amet</li>
+          </ul>
+        </div>
+
       <div class="d-flex justify-content-between align-items-center mt-3">
         <span class="fs-5 fw-bold mb-5 bg-secondary text-white px-3 py-2 rounded">€${product.price}</span>
         <div class="d-flex">
