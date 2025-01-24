@@ -24,11 +24,11 @@ window.addEventListener("DOMContentLoaded", () => {
               <div class="card-body">
                 <h5 class="card-title">${product.name}</h5>
                 <p class="card-text">${product.description}</p>
-                <p class="card-text">€${product.price}</p>
-                  <a href="detail.html?productId=${product._id}" class="btn btn-link text-end d-block text-decoration-none">Scopri di più</a>
-                <a href="backoffice.html?productId=${product._id}" class="btn btn-primary shadow-lg">Modifica</a>
-              
-            
+                <p class="card-text fw-bold text-success ">€${product.price}</p>
+                <div class="d-flex justify-content-end gap-2">
+                   <a href="detail.html?productId=${product._id}" class="btn btn-light border border-secondary text-decoration-none">Scopri di più</a>
+                  <a href="backoffice.html?productId=${product._id}" class="btn btn-primary shadow-lg">Modifica</a>
+                </div>
               </div>
             </div>
           `;

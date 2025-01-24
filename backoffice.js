@@ -86,8 +86,10 @@ window.addEventListener("DOMContentLoaded", () => {
           <div class="card-body">
             <h5 class="card-title">${product.name}</h5>
             <p class="card-text">${product.description}</p>
-            <p class="card-text">€${product.price}</p>
-            <a href="backoffice.html?productId=${product._id}" class="btn btn-primary shadow-lg">Modifica</a>
+            <p class="card-text fw-bold text-success ">€${product.price}</p>
+            <div class="d-flex justify-content-end gap-2">
+              <a href="backoffice.html?productId=${product._id}" class="btn btn-primary shadow-lg">Modifica</a>
+            </div>
           </div>
         </div>
       `;
