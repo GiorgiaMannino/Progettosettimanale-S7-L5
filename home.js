@@ -11,7 +11,6 @@ window.addEventListener("DOMContentLoaded", () => {
     .then((products) => {
       const productsList = document.getElementById("products-list");
 
-      // Ciclo sui prodotti e creo gli elementi HTML per ciascuno
       products.forEach((product) => {
         const productCard = document.createElement("div");
         productCard.classList.add("col-md-4", "mb-4");
@@ -23,8 +22,10 @@ window.addEventListener("DOMContentLoaded", () => {
                 <h5 class="card-title">${product.name}</h5>
                 <p class="card-text">${product.description}</p>
                 <p class="card-text">€${product.price}</p>
-                <a href="backoffice.html?productId=${product._id}" class="btn btn-primary">Modifica</a>
-                 <a href="backoffice.html?productId=${product._id}" class="btn btn-secondary">Elimina</a>
+                  <a href="detail.html?productId=${product._id}" class="btn btn-link text-end d-block">Scopri di più</a>
+                <a href="backoffice.html?productId=${product._id}" class="btn btn-primary ">Modifica</a>
+              
+            
               </div>
             </div>
           `;

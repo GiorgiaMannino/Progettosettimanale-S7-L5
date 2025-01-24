@@ -20,6 +20,38 @@ window.addEventListener("DOMContentLoaded", () => {
         form.elements.nomeBrand.value = product.brand;
         form.elements.immagineProdotto.value = product.imageUrl;
         form.elements.prezzoProdotto.value = product.price;
+
+        // Pulsante "Elimina"
+        const deleteBtn = document.createElement("button");
+        deleteBtn.innerText = "Elimina prodotto";
+        deleteBtn.classList.add("btn", "btn-danger", "mt-3");
+        deleteBtn.type = "button";
+
+        deleteBtn.addEventListener("click", () => {
+          if (confirm("Sei sicuro di voler eliminare questo prodotto?")) {
+            fetch(`https://striveschool-api.herokuapp.com/api/product/${productId}`, {
+              method: "DELETE",
+              headers: {
+                Authorization:
+                  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzkzNTk1M2I3NDcwMTAwMTU4YjJhZWUiLCJpYXQiOjE3Mzc3MDk5MDcsImV4cCI6MTczODkxOTUwN30.g7gXcWHRw5mGDwLujK5yhwG2f2uYNMCmJqjYdQCei8s",
+              },
+            })
+              .then((resp) => {
+                if (resp.ok) {
+                  alert("Prodotto eliminato con successo!");
+                  window.location.href = "backoffice.html";
+                } else {
+                  throw new Error("Errore durante l'eliminazione del prodotto.");
+                }
+              })
+              .catch((err) => {
+                console.error(err);
+                alert("Si è verificato un errore durante l'eliminazione del prodotto.");
+              });
+          }
+        });
+
+        btns.appendChild(deleteBtn);
       });
   }
 });
@@ -47,7 +79,6 @@ form.onsubmit = function (event) {
     },
   })
     .then((resp) => {
-      console.log("Response:", resp);
       if (resp.ok) {
         return resp.json();
       } else {
@@ -55,7 +86,6 @@ form.onsubmit = function (event) {
       }
     })
     .then((product) => {
-      console.log("Product:", product);
       if (!productId) {
         alert(`Prodotto con id ${product._id} creato correttamente!`);
 
