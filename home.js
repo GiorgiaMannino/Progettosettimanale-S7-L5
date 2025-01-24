@@ -1,4 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
+  const loadingIndicator = document.getElementById("loading-indicator");
+  loadingIndicator.style.display = "inline-block";
+
   fetch("https://striveschool-api.herokuapp.com/api/product", {
     method: "GET",
     headers: {
@@ -32,10 +35,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
         productsList.appendChild(productCard);
       });
+      loadingIndicator.style.display = "none";
     })
 
     .catch((error) => {
       console.error("Errore nel recupero dei prodotti:", error);
       alert("C'è stato un errore nel caricare i prodotti.");
+
+      loadingIndicator.style.display = "none";
     });
 });
