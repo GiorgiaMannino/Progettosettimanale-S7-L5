@@ -24,6 +24,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 <p class="card-text">${product.description}</p>
                 <p class="card-text">€${product.price}</p>
                 <a href="backoffice.html?productId=${product._id}" class="btn btn-primary">Modifica</a>
+                 <a href="backoffice.html?productId=${product._id}" class="btn btn-secondary">Elimina</a>
               </div>
             </div>
           `;
